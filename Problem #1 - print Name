@@ -1,0 +1,18 @@
+// Problem #1 - print Name  كورس 4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void PrintName(string Name)
+{
+    cout << "\n Your Name is: " << Name << endl;
+
+}
+
+int main()
+{
+    PrintName("Sajad Abbas");
+
+    return 0;
+}
