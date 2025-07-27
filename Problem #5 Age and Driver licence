@@ -1,0 +1,49 @@
+//  Problem #5  Age and Driver licence كورس4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+#include <iostream>
+using namespace std;
+
+struct stInfo
+{
+    int Age;
+    bool Hasdriverlicence;
+    bool Recommendation;
+};
+
+stInfo ReadInfo()
+{
+    stInfo Info;
+
+    cout << "Please enter Age: \n";
+    cin >> Info.Age;
+
+    cout << "Do you have a driver licence ? : \n";
+    cin >> Info.Hasdriverlicence;
+
+    cout << "Do you have a Recommendation ? : \n";
+    cin >> Info.Recommendation;
+
+    return Info;
+
+}
+bool IsAccepted(stInfo Info)
+{
+    if (Info.Recommendation)
+        return true;
+    else
+
+    return (Info.Age > 21 && Info.Hasdriverlicence);
+
+}
+void PrintResult(stInfo Info)
+{
+    if (IsAccepted(Info))
+        cout << "\n Hired \n";
+    else
+        cout << "\n Rejected \n";
+}
+int main()
+{
+    PrintResult(ReadInfo());
+
+    return 0;
+}
