@@ -1,0 +1,38 @@
+// problem #3 Even and odd كورس4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+enum enNumberType {odd=1, Even=2};
+
+int ReadNumberType()
+{
+	int Num;
+	cout << "Please enter your number: \n";
+	cin >> Num;
+
+	return Num;
+}
+enNumberType CheckNumberType(int Num)
+{
+	int Result = Num % 2;
+
+	if (Result == 0)
+		return enNumberType::Even;
+
+	else
+		return enNumberType::odd;
+}
+void PrintNumberType(enNumberType CheckNumberType)
+{
+	if (CheckNumberType == enNumberType::Even)
+		cout << "\n Number is Even \n";
+	else
+		cout << "\n Number is Odd \n";
+}
+
+int main()
+{
+	PrintNumberType(CheckNumberType(ReadNumberType()));
+	return 0;
+}
