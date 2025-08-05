@@ -1,0 +1,28 @@
+// broblem #7 - HalfNumber _ course 4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int ReadNumber()
+{
+    int Num;
+    cout << "Please enter a Number: \n";
+    cin >> Num;
+
+    return Num;
+}
+float CalculateHalfNumber(int Num)
+{
+    return (float) Num /2;
+}
+void PrintHalfNumber(int Num)
+{
+ string Result = "Half Number of  " + to_string(Num) + " is " + to_string(CalculateHalfNumber(Num));
+ cout << endl << Result << endl;;
+}
+int main()
+{
+    PrintHalfNumber(ReadNumber());
+    return 0;
+}
