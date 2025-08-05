@@ -1,0 +1,41 @@
+// Problem #14 - Swap two Numbers-Course4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+void ReadNumber(int &Num1, int &Num2)
+{
+	cout << "Please enter a Number1: \n";
+	cin >> Num1;
+
+	cout << "Please enter a Number2: \n";
+	cin >> Num2;
+}
+void SwapOf2Numbers(int &Num1, int& Num2)
+{
+	int temp;
+
+	temp = Num1;
+	Num1 = Num2;
+	Num2 = temp;
+
+}
+
+void PrintResult(int Num1, int Num2)
+{
+	cout << "The Number1 = " << Num1 << endl;
+	cout << "The Number2 = " << Num2 << endl;
+
+	cout << "******************************\n";
+}
+int main()
+{
+	int Num1,  Num2;
+	ReadNumber(Num1, Num2);
+	PrintResult(Num1, Num2);
+	SwapOf2Numbers(Num1, Num2);
+	PrintResult(Num1, Num2);
+	
+	return 0;
+
+}
