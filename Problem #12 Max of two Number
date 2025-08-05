@@ -1,0 +1,34 @@
+// Problem #12 Max of two Number -course4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+
+#include <iostream>
+using namespace std;
+
+void ReadNumber(int& Num1, int& Num2)
+{
+	cout << "Please enter your Number1 ? \n";
+	cin >> Num1;
+
+	cout << "Please enter your Number2 ? \n";
+	cin >> Num2;
+}
+int MaxOf2Number(int Num1, int Num2)
+{
+	if (Num1 > Num2)
+		return Num1;
+	else
+		return Num2;
+}
+
+void PrintResult(int Max)
+{
+		cout << "\nThe Maximum Number is: " << Max << endl;
+}
+int main()
+{
+	int Num1, Num2;
+	ReadNumber(Num1, Num2);
+	PrintResult(MaxOf2Number(Num1, Num2));
+
+	return 0;
+}
