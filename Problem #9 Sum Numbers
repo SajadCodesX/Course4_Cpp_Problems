@@ -1,0 +1,32 @@
+// Problem #9 Sum Numbers -Course4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using  namespace std;
+
+void ReadNumbers(int &number1, int& number2, int &number3)
+{
+    cout << "Please enter a Number 1: \n";
+    cin >> number1;
+
+    cout << "Please enter a Number 2: \n";
+    cin >> number2;
+
+    cout << "Please enter a Number 3: \n";
+    cin >> number3;
+}
+int Sumo3fNumbers(int number1, int number2, int number3)
+{
+    return number1 + number2 + number3;
+}
+void PrintSumNumbers(int Total)
+{
+   cout << "\nThe Total  sum of the numbers is: "<< Total << "\n";
+}
+int main()
+{
+    int number1, number2, number3;
+    ReadNumbers(number1, number2, number3);
+    PrintSumNumbers(Sumo3fNumbers(number1, number2, number3));
+
+    return 0;
+}
