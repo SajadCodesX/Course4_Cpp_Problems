@@ -1,0 +1,53 @@
+// Problem #11 - Averge of Pass Fail- course4.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+using namespace std;
+
+enum enPassFail{ Pass=1, Fail=2};
+
+void ReadNumber(int& Mark1, int& Mark2, int& Mark3)
+{
+    cout << "Please enter your a Mark1: \n";
+    cin >> Mark1;
+
+    cout << "Please enter your a Mark2: \n";
+    cin >> Mark2;
+
+    cout << "Please enter your a Mark3: \n";
+    cin >> Mark3;
+}
+int SumOf3Mark(int Mark1, int Mark2, int Mark3)
+{
+    return Mark1 + Mark2+ Mark3;
+}
+
+float AverageOf3Mark(int Mark1, int Mark2, int Mark3)
+{
+    return (float)SumOf3Mark(Mark1 ,Mark2 , Mark3 )/ 3;
+}
+enPassFail  CheckAverage(float Average)
+{
+    if (Average >= 50)
+        return enPassFail::Pass;
+    else
+        return enPassFail::Fail;
+}
+void PrintResult(float Average)
+{
+    cout << "\nThe Average is: " << Average << endl;
+
+    if (CheckAverage(Average) == enPassFail::Pass)
+        cout << "\nYou Passed\n";
+
+    else
+        cout << "\nYou Failed\n";
+}
+int main()
+{
+    int  Mark1 , Mark2 , Mark3;
+
+    ReadNumber(Mark1, Mark2, Mark3);
+    PrintResult(AverageOf3Mark(Mark1, Mark2, Mark3));
+
+    return 0;
+}
